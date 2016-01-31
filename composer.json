@@ -1,0 +1,27 @@
+{
+    "name": "vitexsoftware/skeli.cz",
+    "description": "MC Skeli's site",
+    "license": "Apache 2.0",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "Vítězslav Dvořák",
+            "email": "info@vitexsoftware.cz",
+            "homepage": "http://v.s.cz/"
+        }
+    ],
+    "require": {
+        "php": ">= 5.6.0",
+        "vitexsoftware/ease-framework": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "SkeliCZ\\": "web/classes/"
+        }
+
+    },
+
+    "require-dev": {
+        "robmorgan/phinx": "dev-master"
+    }
+}
