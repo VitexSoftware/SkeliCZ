@@ -13,19 +13,17 @@ namespace SkeliCZ;
 require_once 'includes/SkeliInit.php';
 
 
-$oPage->addItem(new PageTop(_('MC Skeli')));
-
-$oPage->container->addItem(new \Ease\Html\H1Tag(_('News')));
-
+$oPage->addItem(new PageTop(_('MC Skeli\'s videos')));
 
 $oPage->container->addItem(new \Ease\Html\Div(
-        new \Ease\Html\IframeTag('https://www.youtube.com/embed/auNofZzBIFA' 
-        , [
-    'width' => "540",
-    'height' => "380",
+        new \Ease\Html\IframeTag('https://www.youtube.com/embed/videoseries' .
+        '?list=PL7LfTp0728NglwZbzIGldRfoLX5QWsAFS', [
+    'width' => "760",
+    'height' => "515",
     'frameborder' => "0",
     'allowfullscreen'=>true,
     'showinfo' => 1,
+           
         ]
         ),['style'=>'text-align: center;','class'=>'videoWrapper'])
 );
