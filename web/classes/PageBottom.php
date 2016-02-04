@@ -23,6 +23,7 @@ class PageBottom extends \Ease\TWB\Container
         
                 $socialIcons = '
         <a class = "btn btn-primary social-login-btn social-facebook" href = "https://www.facebook.com/Skeli-200396719984376/"><i class = "fa fa-facebook"></i> Skeli</a>
+        <a class = "btn btn-primary social-login-btn social-bandzone" href = "http://bandzone.cz/mcskeli"><i class = "fa fa-facebook"></i> mcskeli</a>
         ';
 
         

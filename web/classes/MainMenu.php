@@ -30,6 +30,7 @@ class MainMenu extends \Ease\Html\Div
         $nav->addMenuItem(new \Ease\Html\ATag('video.php', _('Video')));
         $nav->addMenuItem(new \Ease\Html\ATag('gallery.php', _('Gallery')));
         $nav->addMenuItem(new \Ease\Html\ATag('lyrics.php', _('Lyrics')));
+        $nav->addMenuItem(new \Ease\Html\ATag('contact.php', _('Contact')));
     }
 
     /**

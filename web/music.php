@@ -13,7 +13,9 @@ namespace SkeliCZ;
 require_once 'includes/SkeliInit.php';
 
 
-$oPage->addItem(new PageTop(_('MC Skeli\'s gallery')));
+$oPage->addItem(new PageTop(_('MC Skeli\'s music')));
+
+$oPage->container->addItem('Soundcloud feed');
 
 $oPage->addItem(new PageBottom());
 
