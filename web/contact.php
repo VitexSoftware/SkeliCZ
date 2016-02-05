@@ -15,7 +15,26 @@ require_once 'includes/SkeliInit.php';
 
 $oPage->addItem(new PageTop(_('MC Skeli\'s contacts')));
 
-$oPage->container->addItem('Kontakty atd ...');
+
+$oPage->column1->addItem(new \Ease\Html\H1Tag(_('Mc Skeli')));
+$oPage->column1->addItem(new \Ease\Html\H2Tag(_('Radek Dvořák')));
+
+$address = $oPage->column3->addItem(new \Ease\Html\UlTag());
+
+$address->addItemSmart(new \Ease\Html\ATag('mailto:mc@skeli.cz', 'mc@skeli.cz'));
+$address->addItemSmart(new \Ease\Html\ATag('callto:+420723450204', '(+420) 739  778 202'));
+
+$address->addItemSmart('Žihle 358');
+$address->addItemSmart('331 65');
+
+$oPage->column2->addItem(new \Ease\Html\H1Tag(_('')));
+
+
+
+
+$oPage->column2->addItem(new \Ease\Html\ImgTag('images/skelilogo.png', 'Skeli'));
+
+
 
 $oPage->addItem(new PageBottom());
 
