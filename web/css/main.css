@@ -37,13 +37,13 @@
     border-color: #3c5173;
 }
 
-.social-linkedin {
-    background-color: #4875B4;
-    border-color: #466b99;
-}
-.social-linkedin:hover {
-    background-color: #466b99;
-    border-color: #3b5a7c;
+.social-soundcloud {
+    background-color: #FF8800;
+    border-color: #da573b;
+    
+.social-soundcloud:hover {
+    background-color: #f0ad4e;
+    border-color: #FF8800;
 }
 
 .social-github {

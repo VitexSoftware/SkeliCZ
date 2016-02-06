@@ -5,7 +5,6 @@
         "This file is @generated automatically"
     ],
     "hash": "dfbe491bad5209d2616015d190c1d213",
-    "content-hash": "9c1516743074ee66a1b9deca266a4b58",
     "packages": [
         {
             "name": "vitexsoftware/ease-framework",

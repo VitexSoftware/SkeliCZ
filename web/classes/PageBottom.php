@@ -21,8 +21,10 @@ class PageBottom extends \Ease\TWB\Container
         $footrow = new \Ease\TWB\Row();
         $footrow->addColumn(4, '<iframe src="https://ghbtns.com/github-btn.html?user=VitexSoftware&repo=SkeliCZ&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>');
         
-                $socialIcons = '
+     
+                       $socialIcons = '
         <a class = "btn btn-primary social-login-btn social-facebook" href="https://www.facebook.com/Skeli-200396719984376/"><i class="fa fa-facebook"></i> Skeli</a>
+        <a class = "btn btn-primary social-login-btn social-soundcloud" href="https://soundcloud.com/mcskeli"><i class="fa fa-soundcloud"></i> mcskeli</a>
         <a class = "btn btn-primary social-login-btn social-bandzone" href="http://bandzone.cz/mcskeli"><strong>Bz</strong> mcskeli</a>
         ';
 
