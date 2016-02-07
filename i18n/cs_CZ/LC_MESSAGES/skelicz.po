@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Skeli.cz\n"
-"POT-Creation-Date: 2016-02-06 21:39+0100\n"
-"PO-Revision-Date: 2016-02-06 21:39+0100\n"
+"POT-Creation-Date: 2016-02-07 01:02+0100\n"
+"PO-Revision-Date: 2016-02-07 01:02+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
@@ -13,65 +13,72 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: ..\n"
-"X-Poedit-SearchPath-1: ../../web\n"
+"X-Poedit-SearchPath-0: ../../../web\n"
 
-#: ../../web/Template.php:16 ../../web/index.php:16
+#: ../../../web/Template.php:16 ../../../web/index.php:17
 msgid "MC Skeli"
 msgstr "MC Skeli"
 
-#: ../../web/classes/BootstrapMenu.php:59
+#: ../../../web/classes/BootstrapMenu.php:59
 msgid "Click to hide"
 msgstr "Klikni pro skrytí"
 
-#: ../../web/classes/MainMenu.php:29
+#: ../../../web/classes/MainMenu.php:29
 msgid "Music"
 msgstr "Hudba"
 
-#: ../../web/classes/MainMenu.php:30
+#: ../../../web/classes/MainMenu.php:30
 msgid "Video"
 msgstr "Video"
 
-#: ../../web/classes/MainMenu.php:31
+#: ../../../web/classes/MainMenu.php:31
 msgid "Gallery"
 msgstr "Galerie"
 
-#: ../../web/classes/MainMenu.php:32
+#: ../../../web/classes/MainMenu.php:32
 msgid "Lyrics"
 msgstr "Texty"
 
-#: ../../web/classes/MainMenu.php:33
+#: ../../../web/classes/MainMenu.php:33
 msgid "Contact"
 msgstr "Kontakt"
 
-#: ../../web/contact.php:16
+#: ../../../web/contact.php:16
 msgid "MC Skeli's contacts"
 msgstr "Kontakty na Skeliho"
 
-#: ../../web/contact.php:19
+#: ../../../web/contact.php:19
 msgid "Mc Skeli"
 msgstr "Mc Skeli"
 
-#: ../../web/contact.php:20
+#: ../../../web/contact.php:20
 msgid "Radek Dvořák"
 msgstr "Radek Dvořák"
 
-#: ../../web/gallery.php:22
+#: ../../../web/gallery.php:22
 msgid "MC Skeli's gallery"
 msgstr "Skeliho galerie"
 
-#: ../../web/index.php:18
+#: ../../../web/index.php:20
 msgid "News"
 msgstr "Novinky"
 
-#: ../../web/lyrics.php:16
+#: ../../../web/index.php:22
+msgid "Welcome on my new website!"
+msgstr "Vítejete na mých nových stránkách!"
+
+#: ../../../web/index.php:23
+msgid "For ten years I have been a rap music."
+msgstr "Již deset let se věnuji Rapu a muzice."
+
+#: ../../../web/lyrics.php:16
 msgid "MC Skeli's lyrics"
 msgstr "Skeliho texty"
 
-#: ../../web/music.php:16
+#: ../../../web/music.php:16
 msgid "MC Skeli's music"
 msgstr "Skeliho muzika"
 
-#: ../../web/video.php:16
+#: ../../../web/video.php:16
 msgid "MC Skeli's videos"
 msgstr "Skeliho videa"
