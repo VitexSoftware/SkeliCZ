@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Skeli.cz\n"
-"POT-Creation-Date: 2016-02-07 01:02+0100\n"
-"PO-Revision-Date: 2016-02-07 01:02+0100\n"
+"POT-Creation-Date: 2016-02-12 09:59+0100\n"
+"PO-Revision-Date: 2016-02-12 10:12+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
@@ -15,13 +15,93 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../../web\n"
 
-#: ../../../web/Template.php:16 ../../../web/index.php:17
+#: ../../../web/Template.php:16
 msgid "MC Skeli"
 msgstr "MC Skeli"
+
+#: ../../../web/changepassword.php:19
+msgid "Please enter new password"
+msgstr "Prosím vlož nové heslo"
+
+#: ../../../web/changepassword.php:23
+msgid "Password cannot be like username"
+msgstr "Heslo nesmí být shodné s uživatelským jménem"
+
+#: ../../../web/changepassword.php:34
+msgid "Please enter password confirmation"
+msgstr "Prosím zadej potvrzení hesla"
+
+#: ../../../web/changepassword.php:38
+msgid "Pasword confirmation does not match"
+msgstr "Potvrzení hesla nesouhlasí"
+
+#: ../../../web/changepassword.php:43
+msgid "Please enter current passweod"
+msgstr "Prosím zadej současné heslo"
+
+#: ../../../web/changepassword.php:47
+msgid "Current password is invalid"
+msgstr "Současné heslo je neplatné"
+
+#: ../../../web/changepassword.php:53
+msgid "User password change"
+msgstr "Změna hesla uživatele"
+
+#: ../../../web/changepassword.php:58
+msgid "Password was changed"
+msgstr "Heslo bylo změněno"
+
+#: ../../../web/changepassword.php:60
+msgid "Changed password"
+msgstr "Změněné heslo"
+
+#: ../../../web/changepassword.php:61
+msgid "Dear user, your password was changed"
+msgstr "Milý uživateli. Tvé heslo bylo změněno"
+
+#: ../../../web/changepassword.php:63 ../../../web/login.php:52
+msgid "Login"
+msgstr "Přihlašovací jeméno"
+
+#: ../../../web/changepassword.php:64
+msgid "Password"
+msgstr "Heslo"
+
+#: ../../../web/changepassword.php:71
+msgid "Current password"
+msgstr "Stávající heslo"
+
+#: ../../../web/changepassword.php:72
+msgid "New Password"
+msgstr "Nové heslo"
+
+#: ../../../web/changepassword.php:73
+msgid "New Password confirmation"
+msgstr "Potvrzení nového hesla"
+
+#: ../../../web/changepassword.php:76
+msgid "Change the password"
+msgstr "Změna hesla"
+
+#: ../../../web/changepassword.php:80
+msgid "Password Change"
+msgstr "Změna hesla"
 
 #: ../../../web/classes/BootstrapMenu.php:59
 msgid "Click to hide"
 msgstr "Klikni pro skrytí"
+
+#: ../../../web/classes/ColumnsForm.php:94
+msgid "Uložit"
+msgstr ""
+
+#: ../../../web/classes/ColumnsForm.php:101
+msgid "Uložit a zpět na přehled"
+msgstr ""
+
+#: ../../../web/classes/ColumnsForm.php:108
+msgid "Uložit a další"
+msgstr ""
 
 #: ../../../web/classes/MainMenu.php:29
 msgid "Music"
@@ -55,29 +135,236 @@ msgstr "Mc Skeli"
 msgid "Radek Dvořák"
 msgstr "Radek Dvořák"
 
+#: ../../../web/createaccount.php:36
+msgid "Mail address is short"
+msgstr "Mailová adresa je krátka"
+
+#: ../../../web/createaccount.php:40
+msgid "wrong mail addres"
+msgstr "Špatná mailová adresa"
+
+#: ../../../web/createaccount.php:47
+#, php-format
+msgid "Mail address %s is already registered"
+msgstr "Mailová adresa %s je již registrována"
+
+#: ../../../web/createaccount.php:55
+msgid "Password is short"
+msgstr "Heslo je krátké"
+
+#: ../../../web/createaccount.php:58
+msgid "Password control not match"
+msgstr "Kontrola hesla nesouhlasí"
+
+#: ../../../web/createaccount.php:68
+#, php-format
+msgid "Usernam %s is already taken. Please use another."
+msgstr ""
+
+#: ../../../web/createaccount.php:91
+msgid "Administrator's account created"
+msgstr "Administrátorský účet vytvořen"
+
+#: ../../../web/createaccount.php:94
+msgid "User account created"
+msgstr "Uživatelský účet vytvořen"
+
+#: ../../../web/createaccount.php:99
+msgid "New account confirmation"
+msgstr "Potvrzení nového účtu"
+
+#: ../../../web/createaccount.php:106
+#, php-format
+msgid "New sign on %s"
+msgstr ""
+
+#: ../../../web/createaccount.php:108
+msgid "New user account:\n"
+msgstr ""
+
+#: ../../../web/createaccount.php:117
+msgid "New account was not created"
+msgstr ""
+
+#: ../../../web/createaccount.php:125 ../../../web/createaccount.php:127
+msgid "Sign up"
+msgstr "Registace"
+
+#: ../../../web/createaccount.php:134
+msgid "Jméno"
+msgstr ""
+
+#: ../../../web/createaccount.php:135
+msgid "Příjmení"
+msgstr ""
+
+#: ../../../web/createaccount.php:137
+msgid "přihlašovací jméno"
+msgstr ""
+
+#: ../../../web/createaccount.php:138
+msgid "heslo"
+msgstr ""
+
+#: ../../../web/createaccount.php:139
+msgid "potvrzení hesla"
+msgstr ""
+
+#: ../../../web/createaccount.php:140
+msgid "emailová adresa"
+msgstr ""
+
+#: ../../../web/createaccount.php:142
+msgid "Registrovat"
+msgstr ""
+
+#: ../../../web/createaccount.php:142
+msgid "dokončit registraci"
+msgstr ""
+
 #: ../../../web/gallery.php:22
 msgid "MC Skeli's gallery"
 msgstr "Skeliho galerie"
 
-#: ../../../web/index.php:20
+#: ../../../web/index.php:17
+msgid "MC Skeli's news "
+msgstr "Skeliho novinky"
+
+#: ../../../web/index.php:21
 msgid "News"
 msgstr "Novinky"
 
-#: ../../../web/index.php:22
+#: ../../../web/index.php:23
 msgid "Welcome on my new website!"
 msgstr "Vítejete na mých nových stránkách!"
 
-#: ../../../web/index.php:23
+#: ../../../web/index.php:24
 msgid "For ten years I have been a rap music."
 msgstr "Již deset let se věnuji Rapu a muzice."
+
+#: ../../../web/index.php:41
+msgid ""
+"You are enter to page with marihuana content. By clicking to \"OK\" you "
+"agree that:"
+msgstr ""
+"Vstupuješ na stránky obsahující  konopný obsah. Stiskem tlačítka OK "
+"stvrzuješ, že:"
+
+#: ../../../web/index.php:44
+msgid "I am 18 or older"
+msgstr "Je mi 18 nebo více"
+
+#: ../../../web/index.php:45
+msgid "I am already ganja smoker"
+msgstr "Ganju už hulím"
+
+#: ../../../web/index.php:46
+msgid "I will not browse this page on public"
+msgstr "Neprohlížím tuto stránku na veřejnosti"
+
+#: ../../../web/index.php:47
+msgid "I am familiar with HipHop & Cookies as EU wants"
+msgstr "Souhlasím s HipHopem a ukládáním Cookies  v počítači jak vyžaduje EU"
+
+#: ../../../web/index.php:48
+msgid "I am not provide this page content to underage person"
+msgstr "Nezpřístupním obsah této stránky nezletilým"
+
+#: ../../../web/index.php:52
+msgid "If you do not meet any of the above conditions, please leave this site!"
+msgstr ""
+"Pokud nesplňujete některou z výše uvedených podmínek, opusťte ihned tyto "
+"stránky!"
+
+#: ../../../web/index.php:56
+msgid "Caution!"
+msgstr "Pozor!"
+
+#: ../../../web/login.php:15
+msgid "Cookies required"
+msgstr "Kukís jsou vyžadovány"
+
+#: ../../../web/login.php:27
+msgid "Please enter your login and password"
+msgstr "Prosím zadej jméno a heslo"
+
+#: ../../../web/login.php:30 ../../../web/login.php:48
+msgid "Sign in"
+msgstr "Přihlášení"
+
+#: ../../../web/login.php:42
+msgid "Welcome to Skeli.cz"
+msgstr "Vítejte u Skeliho"
+
+#: ../../../web/login.php:51
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: ../../../web/login.php:58 ../../../web/passwordrecovery.php:59
+msgid "Password recovery"
+msgstr "Obnova hesla"
+
+#: ../../../web/logout.php:22
+msgid "Sign off"
+msgstr "Odhlášení"
+
+#: ../../../web/logout.php:26
+msgid "Good bye & next time"
+msgstr ""
 
 #: ../../../web/lyrics.php:16
 msgid "MC Skeli's lyrics"
 msgstr "Skeliho texty"
 
+#: ../../../web/lyrics.php:30
+msgid "Tutorial One"
+msgstr ""
+
+#: ../../../web/lyrics.php:53
+msgid "Tutorial Two"
+msgstr ""
+
+#: ../../../web/lyrics.php:74
+msgid "Tutorial Three"
+msgstr ""
+
 #: ../../../web/music.php:16
 msgid "MC Skeli's music"
 msgstr "Skeliho muzika"
+
+#: ../../../web/passwordrecovery.php:41
+msgid "Nové heslo pro"
+msgstr ""
+
+#: ../../../web/passwordrecovery.php:43
+msgid "Vaše přihlašovací údaje byly změněny:\n"
+msgstr ""
+
+#: ../../../web/passwordrecovery.php:56
+msgid "Please enter your email"
+msgstr "Prosím zadej svůj Email"
+
+#: ../../../web/passwordrecovery.php:67
+msgid "Lost my password"
+msgstr ""
+
+#: ../../../web/passwordrecovery.php:69
+msgid ""
+"Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při "
+"registraci a my Vám pošleme nové."
+msgstr ""
+
+#: ../../../web/passwordrecovery.php:72
+msgid "Email"
+msgstr "Email"
+
+#: ../../../web/passwordrecovery.php:73
+msgid "Zaslat nové heslo"
+msgstr ""
+
+#: ../../../web/passwordrecovery.php:79
+msgid "Pokračovat"
+msgstr ""
 
 #: ../../../web/video.php:16
 msgid "MC Skeli's videos"

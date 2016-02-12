@@ -37,7 +37,7 @@ if (file_exists('../i18n')) {
 }
 textdomain('skelicz');
 
-
+session_start();
 /**
  * User Object
  * @global \Ease\Anonym | SkeliCZ\User
