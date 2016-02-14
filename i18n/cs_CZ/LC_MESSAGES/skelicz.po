@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Skeli.cz\n"
-"POT-Creation-Date: 2016-02-12 09:59+0100\n"
-"PO-Revision-Date: 2016-02-12 10:12+0100\n"
+"POT-Creation-Date: 2016-02-13 17:37+0100\n"
+"PO-Revision-Date: 2016-02-13 17:39+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
@@ -64,6 +64,7 @@ msgid "Login"
 msgstr "Přihlašovací jeméno"
 
 #: ../../../web/changepassword.php:64
+#: ../../../web/classes/BootstrapMenu.php:42
 msgid "Password"
 msgstr "Heslo"
 
@@ -86,6 +87,28 @@ msgstr "Změna hesla"
 #: ../../../web/changepassword.php:80
 msgid "Password Change"
 msgstr "Změna hesla"
+
+#: ../../../web/classes/BootstrapMenu.php:33
+#: ../../../web/createaccount.php:125 ../../../web/createaccount.php:127
+msgid "Sign up"
+msgstr "Registace"
+
+#: ../../../web/classes/BootstrapMenu.php:38 ../../../web/login.php:30
+#: ../../../web/login.php:48
+msgid "Sign in"
+msgstr "Přihlášení"
+
+#: ../../../web/classes/BootstrapMenu.php:41 ../../../web/login.php:51
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: ../../../web/classes/BootstrapMenu.php:44
+msgid "zapamatuj si mne"
+msgstr ""
+
+#: ../../../web/classes/BootstrapMenu.php:45
+msgid "Log in"
+msgstr "Přihlášení"
 
 #: ../../../web/classes/BootstrapMenu.php:59
 msgid "Click to hide"
@@ -158,8 +181,8 @@ msgstr "Kontrola hesla nesouhlasí"
 
 #: ../../../web/createaccount.php:68
 #, php-format
-msgid "Usernam %s is already taken. Please use another."
-msgstr ""
+msgid "Username %s is already taken. Please use another."
+msgstr "Uživatelské jméno %s je již použito. Prosím zvolte jiné."
 
 #: ../../../web/createaccount.php:91
 msgid "Administrator's account created"
@@ -184,11 +207,7 @@ msgstr ""
 
 #: ../../../web/createaccount.php:117
 msgid "New account was not created"
-msgstr ""
-
-#: ../../../web/createaccount.php:125 ../../../web/createaccount.php:127
-msgid "Sign up"
-msgstr "Registace"
+msgstr "Nový účet nebyl vytvořen"
 
 #: ../../../web/createaccount.php:134
 msgid "Jméno"
@@ -288,21 +307,17 @@ msgstr "Kukís jsou vyžadovány"
 msgid "Please enter your login and password"
 msgstr "Prosím zadej jméno a heslo"
 
-#: ../../../web/login.php:30 ../../../web/login.php:48
-msgid "Sign in"
-msgstr "Přihlášení"
-
 #: ../../../web/login.php:42
 msgid "Welcome to Skeli.cz"
 msgstr "Vítejte u Skeliho"
 
-#: ../../../web/login.php:51
-msgid "Username"
-msgstr "Uživatelské jméno"
-
 #: ../../../web/login.php:58 ../../../web/passwordrecovery.php:59
 msgid "Password recovery"
 msgstr "Obnova hesla"
+
+#: ../../../web/login.php:62
+msgid "Create account"
+msgstr ""
 
 #: ../../../web/logout.php:22
 msgid "Sign off"

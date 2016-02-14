@@ -71,4 +71,15 @@ class WebPage extends \Ease\TWB\WebPage {
         $this->column3 = $row->addColumn(4);
     }
 
+    /**
+     * Only Admin can continue
+     */
+    function onlyForAdmin() {
+        if (!\Ease\Shared::user()->getSettingValue('admin')) {
+            $this->addStatusMessage(_('Only for admin'), 'warning');
+            $this->redirect('login.php');
+            exit();
+        }
+    }
+
 }

@@ -65,12 +65,11 @@ if ($oPage->isPosted()) {
 
     if ($testuser->getMyKey()) {
         $error = true;
-        $oUser->addStatusMessage(sprintf(_('Usernam %s is already taken. Please use another.'), $login), 'warning');
+        $oUser->addStatusMessage(sprintf(_('Username %s is already taken. Please use another.'), $login), 'warning');
     }
 
     if ($error == false) {
-
-        $newOUser = new \Ease\User();
+        $newOUser = new User();
         $newOUser->setData(
                 array(
                     'email' => $emailAddress,
@@ -86,7 +85,7 @@ if ($oPage->isPosted()) {
 
         if (!is_null($userID)) {
             $newOUser->setMyKey($userID);
-            if ($userID == 0) {
+            if ($userID == 1) {
                 $newOUser->setSettingValue('admin', TRUE);
                 $oUser->addStatusMessage(_('Administrator\'s account created'), 'success');
                 $newOUser->saveToSQL();

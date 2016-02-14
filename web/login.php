@@ -17,7 +17,7 @@ if (!is_object($oUser)) {
 
 $login = $oPage->getRequestValue('login');
 if ($login) {
-    \Ease\Shared::user(new \Ease\User());
+    $oUser = \Ease\Shared::user(new User());
 //    \Ease\Shared::user()->SettingsColumn = 'settings';
     if ($oUser->tryToLogin($_POST)) {
         $oPage->redirect('index.php');
@@ -58,8 +58,8 @@ $passRecoveryColumn = $loginRow->addItem(new \Ease\TWB\Col(4, new \Ease\TWB\Link
 ' . _('Password recovery'), 'warning')));
 
 
-//$passRecoveryColumn->additem(new \Ease\TWB\LinkButton('createaccount.php', '<i class="fa fa-user"></i>
-//' . _('Create account'), 'success'));
+$passRecoveryColumn->additem(new \Ease\TWB\LinkButton('createaccount.php', '<i class="fa fa-user"></i>
+' . _('Create account'), 'success'));
 
 $oPage->container->addItem(new \Ease\TWB\Form('Login', null, 'POST', $loginRow));
 

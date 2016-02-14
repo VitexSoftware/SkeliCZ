@@ -66,18 +66,17 @@ if ($formOK && isset($_POST)) {
         $email->send();
     }
 } else {
-    $pwchform = new \Ease\TWB\Form(NULL);
+    $pwchform = new \Ease\TWB\Form('PwCh');
 
-    $pwchform->addInput(new \Ease\Html\InputPasswordTag('CurrentPassword'), NULL, _('Current password'));
-    $pwchform->addInput(new \Ease\Html\InputPasswordTag('password'), NULL, _('New Password'));
-    $pwchform->addInput(new \Ease\Html\InputPasswordTag('passwordConfirm'), NULL, _('New Password confirmation'));
+    $pwchform->addInput(new \Ease\Html\InputPasswordTag('CurrentPassword'),_('Current password'));
+    $pwchform->addInput(new \Ease\Html\InputPasswordTag('password'),  _('New Password'));
+    $pwchform->addInput(new \Ease\Html\InputPasswordTag('passwordConfirm'),  _('New Password confirmation'));
 
-
-    $pwchform->addItem(new \Ease\TWB\SubmitButton(_('Change the password')));
+    $pwchform->addItem(new \Ease\TWB\SubmitButton(_('Change the password'),'success'));
 
     $pwchform->fillUp($_POST);
 
-    $oPage->column2->addItem(new \Ease\TWB\Panel(_('Password Change'), $pwchform, 'warning'));
+    $oPage->column2->addItem(new \Ease\TWB\Panel(_('Password Change'),'warning', $pwchform ));
 }
 
 $oPage->addItem(new PageBottom());
