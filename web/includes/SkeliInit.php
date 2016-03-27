@@ -13,10 +13,10 @@ require_once '../vendor/autoload.php';
 
 
 //Initialise Gettext
-$langs = array(
-    'en_US' => array('en', 'English (International)'),
-    'cs_CZ' => array('cs', 'Česky (Čeština)'),
-);
+$langs = [
+    'en_US' => ['en', 'English (International)'],
+    'cs_CZ' => ['cs', 'Česky (Čeština)'],
+];
 $locale = "en_US";
 if (isset($_SERVER["HTTP_ACCEPT_LANGUAGE"])) {
     $locale = locale_accept_from_http($_SERVER["HTTP_ACCEPT_LANGUAGE"]);

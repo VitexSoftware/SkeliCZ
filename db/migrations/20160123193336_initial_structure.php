@@ -12,37 +12,38 @@ class InitialStructure extends AbstractMigration
         // Migration for table entries
         $table = $this->table('news');
         $table
-            ->addColumn('title', 'string', array('limit' => 128))
-            ->addColumn('text', 'text', array('null' => true))
-            ->addColumn('DatCreate', 'datetime', array())
-            ->addColumn('DatSave', 'datetime', array('null' => true))
+            ->addColumn('title', 'string', ['limit' => 128])
+            ->addColumn('text', 'text', ['null' => true])
+            ->addColumn('DatCreate', 'datetime', [])
+            ->addColumn('DatSave', 'datetime', ['null' => true])
             ->addColumn('author', 'integer')
+            ->addColumn('language', 'string', ['limit' => 2])
             ->create();
-        
+
         $table = $this->table('lyrics');
         $table
-            ->addColumn('name', 'string', array('limit' => 128))
-            ->addColumn('text', 'text', array('null' => true))
+            ->addColumn('name', 'string', ['limit' => 128])
+            ->addColumn('text', 'text', ['null' => true])
             ->create();
 
         $table = $this->table('gallery');
         $table
-            ->addColumn('title', 'string', array('limit' => 128))
-            ->addColumn('note', 'string', array('limit' => 128))
+            ->addColumn('title', 'string', ['limit' => 128])
+            ->addColumn('note', 'string', ['limit' => 128])
             ->create();
 
 
         // Migration for table users
         $table = $this->table('user');
         $table
-            ->addColumn('settings', 'text', array('null' => true))
-            ->addColumn('email', 'string', array('limit' => 128))
-            ->addColumn('firstname', 'string', array('null' => true, 'limit' => 32))
-            ->addColumn('lastname', 'string', array('null' => true, 'limit' => 32))
-            ->addColumn('password', 'string', array('limit' => 40))
-            ->addColumn('login', 'string', array('limit' => 32))
-            ->addColumn('DatCreate', 'datetime', array())
-            ->addColumn('DatSave', 'datetime', array('null' => true))
+            ->addColumn('settings', 'text', ['null' => true])
+            ->addColumn('email', 'string', ['limit' => 128])
+            ->addColumn('firstname', 'string', ['null' => true, 'limit' => 32])
+            ->addColumn('lastname', 'string', ['null' => true, 'limit' => 32])
+            ->addColumn('password', 'string', ['limit' => 40])
+            ->addColumn('login', 'string', ['limit' => 32])
+            ->addColumn('DatCreate', 'datetime', [])
+            ->addColumn('DatSave', 'datetime', ['null' => true])
             ->create();
     }
 }

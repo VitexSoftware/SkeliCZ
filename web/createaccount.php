@@ -71,14 +71,14 @@ if ($oPage->isPosted()) {
     if ($error == false) {
         $newOUser = new User();
         $newOUser->setData(
-                array(
+                [
                     'email' => $emailAddress,
 //                    'parent' => (int) $customerParent,
                     'login' => $login,
                     $newOUser->passwordColumn => $newOUser->encryptPassword($password),
                     'firstname' => $firstname,
                     'lastname' => $lastname
-                )
+                ]
         );
 
         $userID = $newOUser->insertToSQL();
@@ -96,14 +96,14 @@ if ($oPage->isPosted()) {
             $newOUser->loginSuccess();
 
             $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'), _('New account confirmation')));
-            $email->setMailHeaders(array('From' => EMAIL_FROM));
+            $email->setMailHeaders(['From' => EMAIL_FROM]);
             $email->addItem(new \Ease\Html\Div("Account created:\n"));
             $email->addItem(new \Ease\Html\Div(' Login: ' . $newOUser->GetUserLogin() . "\n"));
             $email->addItem(new \Ease\Html\Div(' Heslo: ' . $_POST['password'] . "\n"));
             $email->send();
 
             $email = $oPage->addItem(new \Ease\Mailer(SEND_INFO_TO, sprintf(_('New sign on %s'), $newOUser->GetUserLogin())));
-            $email->setMailHeaders(array('From' => EMAIL_FROM));
+            $email->setMailHeaders(['From' => EMAIL_FROM]);
             $email->addItem(new \Ease\Html\Div(_("New user account:\n")));
             $email->addItem(new \Ease\Html\Div(' Login: ' . $newOUser->GetUserLogin() . "\n"));
             $email->send();
@@ -138,7 +138,7 @@ $regForm->addInput(new \Ease\Html\InputPasswordTag('password'), _('heslo') . ' *
 $regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'), _('potvrzení hesla') . ' *');
 $regForm->addInput(new \Ease\Html\InputTextTag('email_address'), _('emailová adresa') . ' *');
 
-$regForm->addItem(new \Ease\Html\Div(new \Ease\Html\InputSubmitTag('Register', _('Registrovat'), array('title' => _('dokončit registraci'), 'class' => 'btn btn-success'))));
+$regForm->addItem(new \Ease\Html\Div(new \Ease\Html\InputSubmitTag('Register', _('Registrovat'), ['title' => _('dokončit registraci'), 'class' => 'btn btn-success'])));
 
 if (isset($_POST)) {
     $regForm->fillUp($_POST);

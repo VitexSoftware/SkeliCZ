@@ -28,7 +28,7 @@ $oPage->addItem(new PageTop(_('User Profile') . ' ' . $oUser->GetUserLogin()));
 
 
 $settingsFrame = new \Ease\TWB\Panel(_('Settings'));
-$settingsFrame->addItem(new \Ease\Html\ATag('https://secure.gravatar.com/', new \Ease\Html\ImgTag( $oUser->getIcon()), array('title' => 'Click to change avatar')));
+$settingsFrame->addItem(new \Ease\Html\ATag('https://secure.gravatar.com/', new \Ease\Html\ImgTag( $oUser->getIcon()), ['title' => 'Click to change avatar']));
 
 //$settingsFrame->addItem(new IETextInputSaver('login', $oUser->getUserLogin(), _('přihlašovací jméno')));
 $settingsFrame->addItem(new \Ease\TWB\LinkButton('changepassword.php', _('změna hesla')));

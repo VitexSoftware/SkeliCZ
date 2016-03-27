@@ -15,7 +15,6 @@ require_once 'includes/SkeliInit.php';
 
 $oPage->addItem(new PageTop(_('MC Skeli\'s contacts')));
 
-
 $oPage->column1->addItem(new \Ease\Html\H1Tag(_('Mc Skeli')));
 $oPage->column1->addItem(new \Ease\Html\H2Tag(_('Radek Dvořák')));
 

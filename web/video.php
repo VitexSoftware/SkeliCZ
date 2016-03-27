@@ -12,7 +12,6 @@ namespace SkeliCZ;
 
 require_once 'includes/SkeliInit.php';
 
-
 $oPage->addItem(new PageTop(_('MC Skeli\'s videos')));
 
 $oPage->container->addItem(new \Ease\Html\Div(

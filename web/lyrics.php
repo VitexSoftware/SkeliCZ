@@ -15,6 +15,7 @@ require_once 'includes/SkeliInit.php';
 
 $oPage->addItem(new PageTop(_('MC Skeli\'s lyrics')));
 
+$oPage->addCss('body { background-image: url("images/skelilbackstudio.png"); background-position: left top;  background-repeat: no-repeat; }');
 
 $myNav = $oPage->container->addItem(new \Ease\Html\Div(null, ['id' => "myNav", 'data-spy' => "affix", 'data-offset-top' => "60", 'data-offset-bottom' => "200"]));
 

@@ -4,7 +4,7 @@ namespace SkeliCZ;
 
 /**
  * Twitter boostrap menu
- * 
+ *
  * @author Vitex <vitex@hippy.cz>
  * @copyright Vitex@hippy.cz (G) 2016
  */
@@ -25,8 +25,8 @@ class BootstrapMenu extends \Ease\TWB\Navbar {
      * @param array  $properties
      */
     public function __construct($name = null, $content = null, $properties = null) {
-        parent::__construct("Menu", new \Ease\Html\ImgTag('images/skelilogo.png', 'MC Skeli', 20, 20, array('class' => 'img-rounded')), array('class' => 'navbar-fixed-top'));
-        
+        parent::__construct("Menu", new \Ease\Html\ImgTag('images/skelilogo.png', 'MC Skeli', 20, 20, ['class' => 'img-rounded']), ['class' => 'navbar-fixed-top']);
+
         $user = \Ease\Shared::user();
         \Ease\TWB\Part::twBootstrapize();
         if (!$user->getUserID()) {
@@ -65,8 +65,8 @@ class BootstrapMenu extends \Ease\TWB\Navbar {
 </li>
 ', 'right');
         }
-            
-            
+
+
     }
 
     /**
@@ -75,8 +75,8 @@ class BootstrapMenu extends \Ease\TWB\Navbar {
     public function draw() {
         $statusMessages = $this->webPage->getStatusMessagesAsHtml();
         if ($statusMessages) {
-            $this->addItem(new \Ease\Html\Div($statusMessages, array('id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide'), 'data-state' => 'down')));
-            $this->addItem(new \Ease\Html\Div(null, array('id' => 'smdrag')));
+            $this->addItem(new \Ease\Html\Div($statusMessages, ['id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide'), 'data-state' => 'down']));
+            $this->addItem(new \Ease\Html\Div(null, ['id' => 'smdrag']));
         }
         parent::draw();
     }

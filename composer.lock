@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "dfbe491bad5209d2616015d190c1d213",
+    "content-hash": "9c1516743074ee66a1b9deca266a4b58",
     "packages": [
         {
             "name": "vitexsoftware/ease-framework",
@@ -12,16 +13,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Vitexus/EaseFramework.git",
-                "reference": "c33843e4df4aa0e7abceda779e20bed068a712f6"
+                "reference": "302fe8f3e030956baef19b342789caf15c9e8a89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Vitexus/EaseFramework/zipball/c33843e4df4aa0e7abceda779e20bed068a712f6",
-                "reference": "c33843e4df4aa0e7abceda779e20bed068a712f6",
+                "url": "https://api.github.com/repos/Vitexus/EaseFramework/zipball/302fe8f3e030956baef19b342789caf15c9e8a89",
+                "reference": "302fe8f3e030956baef19b342789caf15c9e8a89",
                 "shasum": ""
             },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.5.0"
+            },
             "require-dev": {
-                "robmorgan/phinx": "* dev-master"
+                "jakub-onderka/php-parallel-lint": "^0.9.2",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "robmorgan/phinx": "* dev-master",
+                "satooshi/php-coveralls": "0.6.*",
+                "squizlabs/php_codesniffer": "~2.0"
             },
             "type": "library",
             "autoload": {
@@ -30,7 +40,12 @@
                     "Ease\\Html\\": "src/Ease/Html",
                     "Ease\\JQuery\\": "src/Ease/JQuery",
                     "Ease\\SQL\\": "src/Ease/SQL",
-                    "Ease\\TWB\\": "src/Ease/TWB"
+                    "Ease\\TWB\\": "src/Ease/TWB",
+                    "Test\\Ease\\": "tests/src/Ease/",
+                    "Test\\Ease\\Html\\": "tests/src/Ease/Html",
+                    "Test\\Ease\\JQuery\\": "tests/src/Ease/JQuery",
+                    "Test\\Ease\\SQL\\": "tests/src/Ease/SQL",
+                    "Test\\Ease\\TWB\\": "tests/src/Ease/TWB"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -46,7 +61,7 @@
             ],
             "description": "An PHP Framework for Ease of writing Applications",
             "homepage": "http://v.s.cz/ease.php",
-            "time": "2016-01-31 23:56:42"
+            "time": "2016-02-24 10:37:36"
         }
     ],
     "packages-dev": [
@@ -56,12 +71,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robmorgan/phinx.git",
-                "reference": "436677ecf46d1d6ffa37b78652f6e33056bdc307"
+                "reference": "4e7fee7792f4bf3dbf55ee29001850ba26c86a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/436677ecf46d1d6ffa37b78652f6e33056bdc307",
-                "reference": "436677ecf46d1d6ffa37b78652f6e33056bdc307",
+                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/4e7fee7792f4bf3dbf55ee29001850ba26c86a88",
+                "reference": "4e7fee7792f4bf3dbf55ee29001850ba26c86a88",
                 "shasum": ""
             },
             "require": {
@@ -109,25 +124,28 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2016-01-27 16:33:03"
+            "time": "2016-03-07 14:09:22"
         },
         {
             "name": "symfony/config",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "8c83ff9a2ffbed1e606bc816db11ddc2385a16ee"
+                "reference": "79a97025f7bf4bbf8352b5df1905aa136a531066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/8c83ff9a2ffbed1e606bc816db11ddc2385a16ee",
-                "reference": "8c83ff9a2ffbed1e606bc816db11ddc2385a16ee",
+                "url": "https://api.github.com/repos/symfony/config/zipball/79a97025f7bf4bbf8352b5df1905aa136a531066",
+                "reference": "79a97025f7bf4bbf8352b5df1905aa136a531066",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9",
                 "symfony/filesystem": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/yaml": "To use the yaml reference dumper"
             },
             "type": "library",
             "extra": {
@@ -159,20 +177,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-21 09:38:31"
+            "time": "2016-02-23 15:16:06"
         },
         {
             "name": "symfony/console",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "5a02eaadaa285e2bb727eb6bbdfb8201fcd971b0"
+                "reference": "2ed5e2706ce92313d120b8fe50d1063bcfd12e04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/5a02eaadaa285e2bb727eb6bbdfb8201fcd971b0",
-                "reference": "5a02eaadaa285e2bb727eb6bbdfb8201fcd971b0",
+                "url": "https://api.github.com/repos/symfony/console/zipball/2ed5e2706ce92313d120b8fe50d1063bcfd12e04",
+                "reference": "2ed5e2706ce92313d120b8fe50d1063bcfd12e04",
                 "shasum": ""
             },
             "require": {
@@ -219,20 +237,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-02 13:44:19"
+            "time": "2016-02-28 16:24:34"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "064ac12afd2ceb8a2c1bfb7bed8e931c6dd1997f"
+                "reference": "23ae8f9648d0a7fe94a47c8e20e5bf37c489a451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/064ac12afd2ceb8a2c1bfb7bed8e931c6dd1997f",
-                "reference": "064ac12afd2ceb8a2c1bfb7bed8e931c6dd1997f",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/23ae8f9648d0a7fe94a47c8e20e5bf37c489a451",
+                "reference": "23ae8f9648d0a7fe94a47c8e20e5bf37c489a451",
                 "shasum": ""
             },
             "require": {
@@ -268,11 +286,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-27 11:34:55"
+            "time": "2016-02-23 15:16:06"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -331,16 +349,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "3cf0709d7fe936e97bee9e954382e449003f1d9a"
+                "reference": "b5ba64cd67ecd6887f63868fa781ca094bd1377c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/3cf0709d7fe936e97bee9e954382e449003f1d9a",
-                "reference": "3cf0709d7fe936e97bee9e954382e449003f1d9a",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/b5ba64cd67ecd6887f63868fa781ca094bd1377c",
+                "reference": "b5ba64cd67ecd6887f63868fa781ca094bd1377c",
                 "shasum": ""
             },
             "require": {
@@ -376,7 +394,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-02 13:44:19"
+            "time": "2016-02-23 15:16:06"
         }
     ],
     "aliases": [],

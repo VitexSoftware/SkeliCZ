@@ -39,7 +39,7 @@ if ($emailTo) {
         $PassChanger->passwordChange($newPassword);
 
         $email = $oPage->addItem(new EaseMail($userEmail, 'System.spoje.net - ' . _('Nové heslo pro') . ' ' . $_SERVER['SERVER_NAME']));
-        $email->setMailHeaders(array('From' => constant('EMAIL_FROM')));
+        $email->setMailHeaders(['From' => constant('EMAIL_FROM')]);
         $email->addItem(_("Vaše přihlašovací údaje byly změněny:\n"));
 
         $email->addItem(' Login: ' . $userLogin . "\n");
@@ -58,10 +58,10 @@ if ($emailTo) {
 
 $oPage->addItem(new PageTop(_('Password recovery')));
 
-$row = $oPage->container->addItem(new \Ease\Html\Div(null, array('class' => 'row')));
-$columnI = $row->addItem(new \Ease\Html\Div(null, array('class' => 'col-md-4')));
-$columnII = $row->addItem(new \Ease\Html\Div(null, array('class' => 'col-md-4')));
-$columnIII = $row->addItem(new \Ease\Html\Div(null, array('class' => 'col-md-4')));
+$row = $oPage->container->addItem(new \Ease\Html\Div(null, ['class' => 'row']));
+$columnI = $row->addItem(new \Ease\Html\Div(null, ['class' => 'col-md-4']));
+$columnII = $row->addItem(new \Ease\Html\Div(null, ['class' => 'col-md-4']));
+$columnIII = $row->addItem(new \Ease\Html\Div(null, ['class' => 'col-md-4']));
 
 if (!$success) {
     $columnI->addItem(new \Ease\Html\H1Tag(_('Lost my password')));
@@ -69,7 +69,7 @@ if (!$success) {
     $columnIII->addItem(_('Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při registraci a my Vám pošleme nové.'));
 
     $emailForm = $columnII->addItem(new \Ease\TWB\Form('PassworRecovery'));
-    $emailForm->addItem(new EaseLabeledTextInput('Email', null, _('Email'), array('size' => '40', 'class' => 'form-control')));
+    $emailForm->addItem(new EaseLabeledTextInput('Email', null, _('Email'), ['size' => '40', 'class' => 'form-control']));
     $emailForm->addItem(new EaseTWSubmitButton(_('Zaslat nové heslo')));
 
     if ($oPage->isPosted()) {

@@ -4,7 +4,7 @@ namespace SkeliCZ;
 
 /**
  * Custom Twitter Bootstrap based 4 columns form
- * 
+ *
  * @author Vitex <vitex@hippy.cz>
  * @copyright Vitex@hippy.cz (G) 2009,2010,2011,2012,2016
  */
@@ -58,7 +58,7 @@ class ColumnsForm extends \Ease\TWB\Form {
                 get_class($engine), '', 'POST', $formContents, $tagProperties
         );
         $this->newRow();
-        $this->savers = new \Ease\Html\Div(null, array('style' => 'text-align: right'));
+        $this->savers = new \Ease\Html\Div(null, ['style' => 'text-align: right']);
     }
 
     /**
@@ -91,21 +91,21 @@ class ColumnsForm extends \Ease\TWB\Form {
      * Přidá do formuláře tlačítko "Uložit"
      */
     function addSubmitSave() {
-        $this->savers->addItem(new EaseTWSubmitButton(_('Uložit'), 'default'), array('style' => 'text-align: right'));
+        $this->savers->addItem(new EaseTWSubmitButton(_('Uložit'), 'default'), ['style' => 'text-align: right']);
     }
 
     /**
      * Přidá do formuláře tlačítko "Uložit a zpět na přehled"
      */
     function addSubmitSaveAndList() {
-        $this->savers->addItem(new \Ease\Html\InputSubmitTag('gotolist', _('Uložit a zpět na přehled'), array('class' => 'btn btn-info')));
+        $this->savers->addItem(new \Ease\Html\InputSubmitTag('gotolist', _('Uložit a zpět na přehled'), ['class' => 'btn btn-info']));
     }
 
     /**
      * Přidá do formuláře tlačítko "Uložit a další"
      */
     function addSubmitSaveAndNext() {
-        $this->savers->addItem(new \Ease\Html\InputSubmitTag('gotonew', _('Uložit a další'), array('class' => 'btn btn-success')));
+        $this->savers->addItem(new \Ease\Html\InputSubmitTag('gotonew', _('Uložit a další'), ['class' => 'btn btn-success']));
     }
 
     /**
@@ -147,10 +147,10 @@ class ColumnsForm extends \Ease\TWB\Form {
                     $input_widget = new DatePicker($col_name, $value);
                     break;
                 case 'TEXT':
-                    $input_widget = new \Ease\Html\TextareaTag($col_name, $value, array('class' => 'form-control'));
+                    $input_widget = new \Ease\Html\TextareaTag($col_name, $value, ['class' => 'form-control']);
                     break;
                 case 'STRING':
-                    $input_widget = new \Ease\Html\InputTag($col_name, $value, array('class' => 'form-control'));
+                    $input_widget = new \Ease\Html\InputTag($col_name, $value, ['class' => 'form-control']);
                 default:
                     break;
             }

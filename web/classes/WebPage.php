@@ -4,7 +4,7 @@ namespace SkeliCZ;
 
 /**
  * Custom Twitter Bootstrap based webpage class
- * 
+ *
  * @author Vitex <vitex@hippy.cz>
  * @copyright Vitex@hippy.cz (G) 2009,2010,2011,2012,2016
  */
@@ -18,31 +18,31 @@ class WebPage extends \Ease\TWB\WebPage {
 
     /**
      * Page main continer
-     * @var TWB\Contaner 
+     * @var TWB\Contaner
      */
     public $container = NULL;
 
     /**
-     * First column 
-     * @var TWB\Col 
+     * First column
+     * @var TWB\Col
      */
     public $column1 = NULL;
 
     /**
      * Second column
-     * @var TWB\Col 
+     * @var TWB\Col
      */
     public $column2 = NULL;
 
     /**
      * Third column
-     * @var TWB\Col 
+     * @var TWB\Col
      */
     public $column3 = NULL;
 
     /**
      * Basic Custom Twitter Bootstrap based webpage class
-     * 
+     *
      * @param string $pageTitle
      */
     function __construct($pageTitle = null) {
@@ -62,7 +62,7 @@ class WebPage extends \Ease\TWB\WebPage {
         $this->includeJavaScript('js/youtube.js');
         $this->container = $this->addItem(new \Ease\TWB\Container);
 
-        $this->heroUnit = $this->container->addItem(new \Ease\Html\Div(null, array('class' => 'hero-unit')));
+        $this->heroUnit = $this->container->addItem(new \Ease\Html\Div(null, ['class' => 'hero-unit']));
 
         $row = $this->container->addItem(new \Ease\TWB\Row);
 

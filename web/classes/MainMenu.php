@@ -33,10 +33,7 @@ class MainMenu extends \Ease\Html\Div {
         if ($user->getSettingValue('admin')) {
             $nav->addMenuItem(new \Ease\TWB\LinkButton('galleryedit.php', '<i class="fa fa-pencil"></i> ' . _('Edit Gallery')));
         }
-        $nav->addMenuItem(new \Ease\Html\ATag('download.php', _('Download')));
-        if ($user->getSettingValue('admin')) {
-            $nav->addMenuItem(new \Ease\TWB\LinkButton('downloadedit.php', '<i class="fa fa-pencil"></i> ' . _('Edit Download')));
-        }
+//        $nav->addMenuItem(new \Ease\Html\ATag('download.php', _('Download')));
         $nav->addMenuItem(new \Ease\Html\ATag('lyrics.php', _('Lyrics')));
         if ($user->getSettingValue('admin')) {
             $nav->addMenuItem(new \Ease\TWB\LinkButton('newsedit.php', '<i class="fa fa-pencil"></i> ' . _('Edit lyrics')));
