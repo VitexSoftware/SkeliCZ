@@ -97,8 +97,6 @@ usínaš každou noc z depkou,
 že ses dal na cestu opravdu nepěknou.
     ');
 
-$oPage->column1->addItem($trosky);
-$oPage->column1->addTagClass('smokeback');
 
 $divnaPlaneta[] = new \Ease\Html\H1Tag('Divná Planeta');
 $divnaPlaneta[] = nl2br('
@@ -133,9 +131,6 @@ vedle silnice bordel,kam to spěje tenhle svět ?
 Nad tím co se děje mi začíná rozum stát
 páč stojím sváma na lodi co brzo ztroskotá
 ');
-
-$oPage->column2->addItem($divnaPlaneta);
-$oPage->column2->addTagClass('smokeback');
 
 $ganja[] = new \Ease\Html\H1Tag('Ganja');
 $ganja[] = nl2br('
@@ -177,7 +172,15 @@ spasitel a lék na smutek a vztk
 málo kdo to pochopí lidi nejsou ochotný
 žít životy svobodný
 ');
-$oPage->column3->addItem($ganja);
+
+$lyrics = new \Ease\TWB\Row();
+
+$lyrics->addColumn(6);
+$lyrics->addColumn(2, $trosky);
+$lyrics->addColumn(2, $divnaPlaneta);
+$lyrics->addColumn(2, $ganja);
+
+$oPage->container->addItem($lyrics);
 
 $oPage->addItem(new PageBottom());
 
