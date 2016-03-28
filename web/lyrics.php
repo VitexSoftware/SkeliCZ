@@ -17,96 +17,167 @@ $oPage->addItem(new PageTop(_('MC Skeli\'s lyrics')));
 
 $oPage->addCss('body { background-image: url("images/skelilbackstudio.png"); background-position: left top;  background-repeat: no-repeat; }');
 
-$myNav = $oPage->container->addItem(new \Ease\Html\Div(null, ['id' => "myNav", 'data-spy' => "affix", 'data-offset-top' => "60", 'data-offset-bottom' => "200"]));
+$trosky[] = new \Ease\Html\H1Tag('Trosky');
+$trosky[] = nl2br('
+Vy hlavy dutý, ste dávno vypntý,
+vaše existence pochybný
+nechutně vyhublí,
+držky propadlí,
+odpadlíci co se sami zahubí
+vysmažený nátury
+s celým životem naruby.
 
-$affixIndex = new \Ease\Html\UlTag(null, ['class' => "nav nav-tabs nav-stacked affix"]);
-$affixIndex->addItemSmart(new \Ease\Html\ATag('#one', 'Tutorial One'), ['class' => 'active']);
-$affixIndex->addItemSmart(new \Ease\Html\ATag('#two', 'Tutorial Two'));
-$affixIndex->addItemSmart(new \Ease\Html\ATag('#three', 'Tutorial Three'));
+Vyschlej jako dromedár,
+tváříš se jak top stár,
+přitom seš jen top kár
+co si život pojebal.
+Probodaný žíly dodavaj ti dalši síly
+žiješ jenom pro tu chvíli
+kdy se nafutruješ bílým!
 
+Trosky s nevyvinutými mozky,
+vybílí byt pro bílí.
+Bez matra by nepřežili!
+Vykradou vlastní rodiny,
+během hodiny rozbili roky
+kdy pro ne rodiny
+ruce i do ohne vložili.
 
-$myNav->addItem(new \Ease\TWB\Col(3, $affixIndex));
-$affixBody = $myNav->addItem(new \Ease\TWB\Col(9));
+Hromada ostudy za vychovaný žaludy,
+přeludy bez budoucnosti kerou si sami pohřbili,
+nepochopili kam to vlastně vstoupili
+že už z toho nejde jen tak ven
+že nejsou jenom opilí.
 
-$affixBody->addItem(new \Ease\Html\H2Tag(_('Tutorial One'), ['id' => 'one']));
-$affixBody->addItem(new \Ease\Html\PTag('  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus,
-            dapibus nec turpis vel, semper malesuada ante. Vestibulum 
-            id metus ac nisl bibendum scelerisque non non purus. Suspendisse 
-            varius nibh non aliquet sagittis. In tincidunt orci sit amet 
-            elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque 
-            aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum 
-            eu, tristique eget risus. Integer aliquet quam ut elit suscipit, 
-            id interdum neque porttitor. Integer faucibus ligula.'));
+Jste špatny jak tví blbí zažívaní
+savci co to sajou bez přestaní.
+Vaše fetiš klaní vás dohaní
+až k pobodaní při nedostaní
+další dávky
+.
+Tyhle kroky nejdou vzit už zpátky
+stal ses vrahem pro kus zkurvený hromadky.
+Krev z rukou už nejde smít
+teď nevíš jak s timhle činem žít
+teď teprv si procit,
+bodá tě pocit
+bezmoci od rána do noci
+přemejšlíš kdo si,
+jsi zlosyn vole
+jsi v koncích.
 
-$affixBody->addItem(new \Ease\Html\PTag('Vestibulum quis quam ut magna consequat faucibus. 
-            Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum 
-            risus. Pellentesque viverra sagittis quam at mattis. Suspendisse
-            potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.
-            Phasellus auctor velit at lacus blandit, commodo iaculis justo
-            viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget
-            mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat.
-            Maecenas mattis lectus enim, quis tincidunt dui molestie euismod.
-            Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus.'));
+V krymu si na tvou prdel zuby už brousí
+ještě než se z toho zhroutíš malatně
+po cimře bloudíš,
+delírium končí a v pytli uz prazdno
+všechno vysáto,
+v hlavě vymazáno
+ano maš vydělano.
 
-$affixBody->addItem(new \Ease\Html\HrTag());
-$affixBody->addItem(new \Ease\Html\H2Tag(_('Tutorial Two'), ['id' => 'two']));
+Bereš nohy na ramena,
+utíkaš jak dítě.
+Nechceš za mříže,
+stejně to příjde.
+Boži mlíny melou,
+tebe berou sebou.
+Ou upadlo ti mýdlo?
+teď jebou tě ve dvou.
 
-$affixBody->addItem(new \Ease\Html\PTag('Nullam hendrerit justo non leo aliquet imperdiet. Etiam in 
-            sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis 
-            dapibus orci. In dapibus velit blandit pharetra tincidunt. 
-            Quisque non sapien nec lacus condimentum facilisis ut iaculis enim.
-            Sed viverra interdum bibendum. Donec ac sollicitudin dolor. Sed 
-            fringilla vitae lacus at rutrum. Phasellus congue vestibulum ligula sed consequat.'));
+Za tví činy na deset let úděl maminy
+pěknej program už si tam pro tebe připravili.
+S tvou vyhublou postavou
+nemůžes se branit
+každej den tě každej muže v klidu klatit,
+už si nemužeš ani sednout,
+chtěl bys rači zhebnout.
 
-$affixBody->addItem(new \Ease\Html\PTag('Vestibulum consectetur scelerisque lacus, ac fermentum lorem 
-            convallis sed. Nam odio tortor, dictum quis malesuada at, 
-            pellentesque vitae orci. Vivamus elementum, felis eu auctor lobortis,
-            diam velit egestas lacus, quis fermentum metus ante quis urna. Sed at 
-            facilisis libero. Cum sociis natoque penatibus et magnis dis
-            parturient montes, nascetur ridiculus mus. Vestibulum bibendum 
-            blandit dolor. Nunc orci dolor, molestie nec nibh in, hendrerit
-            tincidunt ante. Vivamus sem augue, hendrerit non sapien in, 
-            mollis ornare augue.'));
+Než si s tebou přijdou zase jebnout,
+usínaš každou noc z depkou,
+že ses stal fetkou
+že ses dal na cestu opravdu nepěknou.
+    ');
 
-$affixBody->addItem(new \Ease\Html\HrTag());
+$oPage->column1->addItem($trosky);
+$oPage->column1->addTagClass('smokeback');
 
-$affixBody->addItem(new \Ease\Html\H2Tag(_('Tutorial Three'), ['id' => 'three']));
+$divnaPlaneta[] = new \Ease\Html\H1Tag('Divná Planeta');
+$divnaPlaneta[] = nl2br('
+Zhostí se tě divnej pocit když otevřeš svoje oči
+máme v tom prsty,nesnažte se viny zprostit
+chovejme se tak, jak maj se chovat hosti
+pozdě budem prosit až tu zbydou trosky
 
-$affixBody->addItem(new \Ease\Html\PTag('Integer pulvinar leo id risus pellentesque vestibulum. 
-            Sed diam libero, sodales eget sapien vel, porttitor bibendum enim. 
-            Donec sed nibh vitae lorem porttitor blandit in nec ante. 
-            Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada 
-            condimentum. Etiam in aliquam lectus. Nam vel sapien diam. Donec
-            pharetra id arcu eget blandit. Proin imperdiet mattis augue in
-            porttitor. Quisque tempus enim id lobortis feugiat. Suspendisse 
-            tincidunt risus quis dolor fringilla blandit. Ut sed sapien at purus
-            lacinia porttitor. Nullam iaculis, felis a pretium ornare, dolor nisl
-            semper tortor, vel sagittis lacus est consequat eros. Sed id pretium
-            nisl. Curabitur dolor nisl, laoreet vitae aliquam id, tincidunt sit 
-            amet mauris.'));
+šinu si to sám cestou temnou a dlouhou
+kráčím s hlavou sklopenou, skalenou, zmatenou
+plnou myšlenek který jen tak neodejdou
+jen lidi odcházej, krásny vzpomínky si berou sebou
+přitom si vemou cenu pro mě nesnesitelnou
+je to fake jak kerka henou, chvilku sou a pak se smejou
+hold na divný planetě se divny věci dějou
 
-$affixBody->addItem(new \Ease\Html\PTag('Phasellus vitae suscipit justo. Mauris pharetra feugiat ante 
-            id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus
-            turpis at accumsan tincidunt. Phasellus risus risus,
-            volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit 
-            dolor eget ante rutrum adipiscing. Cras interdum ipsum mattis, 
-            tempus mauris vel, semper ipsum. Duis sed dolor ut enim lobortis 
-            pellentesque ultricies ac ligula. Pellentesque convallis  elit nisi, id 
-            vulputate ipsum ullamcorper ut. Cras ac pulvinar purus, ac viverra est. Suspendisse 
-            potenti. Integer pellentesque neque et elementum tempus. 
-            Curabitur bibendum in ligula ut rhoncus.'));
+mířím do nečasu kde všichni hledí na krasu
+holky měří vztah podle délky ocasů
+kam se poděl elán, dřív ho měl každej pán
+gentleman na každým rohu dveře dámám otvíral
+a dnes ? Furt vidim  že někdo někoho unes
+je to děs běs, všude vykácenej les
+na naší planetě může jenom průmysl kvéct
+a ta planeta je jako klec ze který nemůžeš utéct
 
-$affixBody->addItem(new \Ease\Html\PTag('Quisque pharetra velit id velit iaculis pretium. Nullam a justo 
-            sed ligula porta semper eu quis enim. Pellentesque pellentesque,
-            metus at facilisis hendrerit, lectus velit facilisis leo, quis
-            volutpat turpis arcu quis enim. Nulla viverra lorem elementum
-            interdum ultricies. Suspendisse accumsan quam nec ante mollis tempus.
-            Morbi vel accumsan diam, eget convallis tellus. Suspendisse potenti.'));
+války, rasizmus, drogy, vrazi
+mnoho pastí co lidi na kolena srazí
+odražená kulka co zabila malího kluka
+pro rodinu jsou to nepředstavitelný muka
+za volantem alkohol, v ulicích fet
+vedle silnice bordel,kam to spěje tenhle svět ?
+Nad tím co se děje mi začíná rozum stát
+páč stojím sváma na lodi co brzo ztroskotá
+');
 
+$oPage->column2->addItem($divnaPlaneta);
+$oPage->column2->addTagClass('smokeback');
 
+$ganja[] = new \Ease\Html\H1Tag('Ganja');
+$ganja[] = nl2br('
+Začalo to nevině, takhle jednou po víně
+sedíme,zevlíme o svetě vůbec nevíme
+sotva patnact let, hold kluci neznalí
+svou první zelenou cigaretu zamotají
 
+stav houpaví se dostaví když to brčko odpalíš
+s chutí do života vrháme se do víru poznaní
+v puse nemam ani slinu v tomhle dýmu se rozplynu
+inu tuhle rostlinu, od tý doby každou hodinu
+
+jídlo,pití,chutná líp,v praci se da líp přežít
+celej den je veselej tak nedělej že seš nesmělej
+do kroužku sedej, nebuť jelen, život máš jenom jeden
+tak si ho pořádně užívěj
+
+2xR:
+je to Gajnja mocný čaroděj jménem Ganja
+spasitel a lék na smutek a vztk
+málo kdo to pochopí lidi nejsou ochotný
+žít životy svobodný
+
+hnedka ráno co vstanu zamotám si pul gramu
+další pul gramu nachám na dýl  na programu
+všude zákazy,rostliny ilegalní
+mi nezabrání ve vyhledáváni idealních míst
+kam si zalíst a nechat se svíct vuní grandiozních palic
+už stačí jen zabalit, na záda se svalit užívat dokonali stavy
+bez práce bez námahy joooo to mám rad tak mě to baví
+zdravím všechny přatele který dělaj to samí
+sme očarovany mocným kouzlem mirumilovným
+nedá se to srovnat z chlastem
+
+3x R:
+je to Gajnja mocný čaroděj jménem Ganja
+spasitel a lék na smutek a vztk
+málo kdo to pochopí lidi nejsou ochotný
+žít životy svobodný
+');
+$oPage->column3->addItem($ganja);
 
 $oPage->addItem(new PageBottom());
 
