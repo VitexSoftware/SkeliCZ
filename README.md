@@ -1,11 +1,6 @@
 SkeliCZ - Musician homepage
 ===========================
 
-EaseFramework based example Applicaton
-
-http://skeli.cz/
-
-
   (G) 2012 Vítězslav Vitex Dvořák
 
 **Requirements**

@@ -14,6 +14,7 @@ require_once 'includes/SkeliInit.php';
 
 $oPage->addItem(new PageTop(_('MC Skeli\'s videos')));
 
+
 $oPage->container->addItem(new \Ease\Html\Div(
         new \Ease\Html\IframeTag('https://www.youtube.com/embed/videoseries' .
         '?list=PL7LfTp0728NglwZbzIGldRfoLX5QWsAFS', [
@@ -26,6 +27,9 @@ $oPage->container->addItem(new \Ease\Html\Div(
         ]
         ),['style'=>'text-align: center;','class'=>'videoWrapper'])
 );
+
+$oPage->container->addItem(new \Ease\TWB\LinkButton('https://www.facebook.com/SKELIjedeSVOU/videos/',
+    _("Skeli's videos on Facebook"), 'success'));
 
 $oPage->addItem(new PageBottom());
 

@@ -8,26 +8,26 @@ environments:
     production:
         adapter: mysql
         host: localhost
-        name: skelicz
-        user: skelicz
-        pass: skelicz
+        name: c2skelicz
+        user: c2skelicz
+        pass: x92!jpAZ
         port: 3306
         charset: utf8
 
     development:
         adapter: mysql
         host: localhost
-        name: skelicz
-        user: skelicz
-        pass: skelicz
+        name: c2skelicz
+        user: c2skelicz
+        pass: x92!jpAZ
         port: 3306
         charset: utf8
 
     testing:
         adapter: mysql
         host: localhost
-        name: skelicz
-        user: skelicz
-        pass: skelicz
+        name: c2skelicz
+        user: c2skelicz
+        pass: x92!jpAZ
         port: 3306
         charset: utf8

@@ -36,7 +36,8 @@ class MainMenu extends \Ease\Html\Div {
 //        $nav->addMenuItem(new \Ease\Html\ATag('download.php', _('Download')));
         $nav->addMenuItem(new \Ease\Html\ATag('lyrics.php', _('Lyrics')));
         if ($user->getSettingValue('admin')) {
-            $nav->addMenuItem(new \Ease\TWB\LinkButton('newsedit.php', '<i class="fa fa-pencil"></i> ' . _('Edit lyrics')));
+            $nav->addMenuItem(new \Ease\TWB\LinkButton('lyricsedit.php',
+                '<i class="fa fa-pencil"></i> '._('Edit lyrics')));
         }
         $nav->addMenuItem(new \Ease\Html\ATag('contact.php', _('Contact')));
     }

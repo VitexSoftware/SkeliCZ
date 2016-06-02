@@ -23,33 +23,10 @@ $newscolumn = $indexrow->addColumn(4, new \Ease\Html\H1Tag(_('News')));
 $newscolumn->addItem(new NewsShow());
 
 
-
-/*
-Zdravím lidičky :]
-
-Jmenuji se Radek Dvořák, narozený 29.1.1992 v Podbořanech.
-
-Trvale bydlím na severu Plzeňska v malé obci Žihle kde jsou jen korozí napadený vydle xD... Vyučil jsem se v Podbořanech jako instalatér a tímto povoláním se také živim.
-
-Mým koníčkem se už kolemroku 2010 stal hip hop ve všech směrech jak ho známe.
-Nejdříve jsem začal kreslit graffity, a rok poté i beatbox. Až jsem se nakonec dospěl až k rapu který jako jediný dělam dodnes, coz je přiblize 8 let od prvního textu co sem napsal (raději ho ani nikde nevyhledavejte je to děs xD )
-
-
-Hi folks:]
-My name is Radek Dvorak, born 29 January 1992 in Podbořany.
-
-Permanently live in the north of Pilsen in a small village Žihle ... I was trained in Podbořany as a plumber by profession I do today.
-My hobby was from 2010 the hip-hop in all directions as we know it.
-
-First, I started to draw graffiti, and the year after and beatbox. Until I finally came to a rap which alone do today, which would bring them closer to 8 years from the first text that I wrote (even better Never look it's terror xD)
-
- */
-
-
-
-$videocolumn = $indexrow->addColumn(6, new \Ease\Html\Div(
-        new \Ease\Html\IframeTag('https://www.youtube.com/embed/auNofZzBIFA'
-        , [
+$videocolumn = $indexrow->addColumn(6,
+    new \Ease\Html\Div(
+    new \Ease\Html\IframeTag('https://www.youtube.com/embed/8jcSUU-Xgvs'
+    , [
     'width' => "540",
     'height' => "380",
     'frameborder' => "0",
@@ -58,6 +35,10 @@ $videocolumn = $indexrow->addColumn(6, new \Ease\Html\Div(
         ]
         ), ['style' => 'text-align: center;', 'class' => 'videoWrapper'])
 );
+
+$videocolumn->addItem('<p><br/></p>');
+
+$videocolumn->addItem(new FacebookWall());
 
 $oPage->container->addItem($indexrow);
 

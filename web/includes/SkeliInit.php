@@ -32,9 +32,7 @@ foreach ($langs as $code => $lang) {
 setlocale(LC_ALL, $locale);
 bind_textdomain_codeset("skelicz", "UTF-8");
 putenv("LC_ALL=$locale");
-if (file_exists('../i18n')) {
-    bindtextdomain('skelicz', '../i18n');
-}
+bindtextdomain('skelicz', './i18n');
 textdomain('skelicz');
 
 session_start();
