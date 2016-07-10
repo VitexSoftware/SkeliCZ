@@ -1,8 +1,6 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Skeli.cz Site
  */
 
 namespace SkeliCZ;
@@ -14,18 +12,18 @@ namespace SkeliCZ;
  */
 class NewsShow extends \Ease\Container
 {
-
-    function __construct()
+    
+    function __construct($datasource)
     {
         parent::__construct();
-        $newser = new News;
-        $news   = $newser->getAllFromSQL(null, null, null, 'id DESC', 'id');
+        $news = $datasource->dblink->queryToArray('SELECT * FROM '.$datasource->getMyTable().' , user WHERE author = user.id',
+            'id', 'id');
         foreach ($news as $article) {
 
             $articletext = $this->addItem(new \Ease\Html\Div(new \Ease\Html\H4Tag($article['title']),
                 ['class' => 'smokeback']));
             $articletext->addItem(new \Ease\Html\Div($article['text']));
-            $articletext->addItem(new \Ease\Html\Div('<hr><div style="text-align: right"><small>'.strftime("%d/%m/%Y %H:%M:%S",
+            $articletext->addItem(new \Ease\Html\Div('<hr><div style="text-align: right"><small>'.$article['login'].' '.strftime("%d/%m/%Y %H:%M:%S",
                     strtotime($article['DatCreate'])).'</small></div>'));
         }
     }

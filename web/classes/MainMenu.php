@@ -28,6 +28,7 @@ class MainMenu extends \Ease\Html\Div {
             $nav->addMenuItem(new \Ease\TWB\LinkButton('newsedit.php', '<i class="fa fa-pencil"></i> ' . _('Edit news')));
         }
         $nav->addMenuItem(new \Ease\Html\ATag('music.php', _('Music')));
+        $nav->addMenuItem(new \Ease\Html\ATag('writeme.php', _('Write me')));
         $nav->addMenuItem(new \Ease\Html\ATag('video.php', _('Video')));
         $nav->addMenuItem(new \Ease\Html\ATag('gallery.php', _('Gallery')));
         if ($user->getSettingValue('admin')) {

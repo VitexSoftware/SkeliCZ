@@ -14,7 +14,7 @@ require_once 'includes/SkeliInit.php';
 $process = false;
 
 $firstname = $oPage->getRequestValue('firstname');
-$lastname = $oPage->getRequestValue('lastname');
+$lastname  = $oPage->getRequestValue('lastname');
 
 if ($oPage->isPosted()) {
     $process = true;
@@ -35,7 +35,7 @@ if ($oPage->isPosted()) {
         $error = true;
         $oUser->addStatusMessage(_('Mail address is short'), 'warning');
     } else {
-        if (!$oUser->IsEmail($emailAddress, true)) {
+        if (!filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
             // $error = true;
             $oUser->addStatusMessage(_('wrong mail addres'), 'warning');
         } else {
@@ -44,7 +44,8 @@ if ($oPage->isPosted()) {
             $testuser->loadFromSQL($oPage->EaseAddSlashes($emailAddress));
             if ($testuser->getUserName()) {
                 $error = true;
-                $oUser->addStatusMessage(sprintf(_('Mail address %s is already registered'), $emailAddress), 'warning');
+                $oUser->addStatusMessage(sprintf(_('Mail address %s is already registered'),
+                        $emailAddress), 'warning');
             }
             unset($testuser);
         }
@@ -65,20 +66,21 @@ if ($oPage->isPosted()) {
 
     if ($testuser->getMyKey()) {
         $error = true;
-        $oUser->addStatusMessage(sprintf(_('Username %s is already taken. Please use another.'), $login), 'warning');
+        $oUser->addStatusMessage(sprintf(_('Username %s is already taken. Please use another.'),
+                $login), 'warning');
     }
 
     if ($error == false) {
         $newOUser = new User();
         $newOUser->setData(
-                [
-                    'email' => $emailAddress,
+            [
+                'email' => $emailAddress,
 //                    'parent' => (int) $customerParent,
-                    'login' => $login,
-                    $newOUser->passwordColumn => $newOUser->encryptPassword($password),
-                    'firstname' => $firstname,
-                    'lastname' => $lastname
-                ]
+                'login' => $login,
+                $newOUser->passwordColumn => $newOUser->encryptPassword($password),
+                'firstname' => $firstname,
+                'lastname' => $lastname
+            ]
         );
 
         $userID = $newOUser->insertToSQL();
@@ -87,7 +89,8 @@ if ($oPage->isPosted()) {
             $newOUser->setMyKey($userID);
             if ($userID == 1) {
                 $newOUser->setSettingValue('admin', TRUE);
-                $oUser->addStatusMessage(_('Administrator\'s account created'), 'success');
+                $oUser->addStatusMessage(_('Administrator\'s account created'),
+                    'success');
                 $newOUser->saveToSQL();
             } else {
                 $oUser->addStatusMessage(_('User account created'), 'success');
@@ -95,17 +98,19 @@ if ($oPage->isPosted()) {
 
             $newOUser->loginSuccess();
 
-            $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'), _('New account confirmation')));
+            $email = $oPage->addItem(new \Ease\Mailer($newOUser->getDataValue('email'),
+                _('New account confirmation')));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
             $email->addItem(new \Ease\Html\Div("Account created:\n"));
-            $email->addItem(new \Ease\Html\Div(' Login: ' . $newOUser->GetUserLogin() . "\n"));
-            $email->addItem(new \Ease\Html\Div(' Heslo: ' . $_POST['password'] . "\n"));
+            $email->addItem(new \Ease\Html\Div(' Login: '.$newOUser->GetUserLogin()."\n"));
+            $email->addItem(new \Ease\Html\Div(' Heslo: '.$_POST['password']."\n"));
             $email->send();
 
-            $email = $oPage->addItem(new \Ease\Mailer(SEND_INFO_TO, sprintf(_('New sign on %s'), $newOUser->GetUserLogin())));
+            $email = $oPage->addItem(new \Ease\Mailer(SEND_INFO_TO,
+                sprintf(_('New sign on %s'), $newOUser->GetUserLogin())));
             $email->setMailHeaders(['From' => EMAIL_FROM]);
             $email->addItem(new \Ease\Html\Div(_("New user account:\n")));
-            $email->addItem(new \Ease\Html\Div(' Login: ' . $newOUser->GetUserLogin() . "\n"));
+            $email->addItem(new \Ease\Html\Div(' Login: '.$newOUser->GetUserLogin()."\n"));
             $email->send();
 
             \Ease\Shared::user($newOUser)->loginSuccess();
@@ -114,8 +119,10 @@ if ($oPage->isPosted()) {
             exit;
         } else {
             $oUser->addStatusMessage(_('New account was not created'), 'error');
-            $email = $oPage->addItem(new \Ease\Mail(constant('SEND_ORDERS_TO'), 'New account was not created'));
-            $email->addItem(new \Ease\Html\DivTag('Account', $oPage->printPre($newOUser->getData())));
+            $email = $oPage->addItem(new \Ease\Mail(constant('SEND_ORDERS_TO'),
+                'New account was not created'));
+            $email->addItem(new \Ease\Html\DivTag('Account',
+                $oPage->printPre($newOUser->getData())));
             $email->send();
         }
     }
@@ -127,18 +134,26 @@ $regFace = $oPage->container->addItem(new \Ease\TWB\Panel(_('Sign up')));
 
 $regForm = $regFace->addItem(new ColumnsForm(new \Ease\User));
 if ($oUser->getUserID()) {
-    $regForm->addItem(new \Ease\Html\InputHiddenTag('parent', $oUser->GetUserID()));
+    $regForm->addItem(new \Ease\Html\InputHiddenTag('parent',
+        $oUser->GetUserID()));
 }
 
-$regForm->addInput(new \Ease\Html\InputTextTag('firstname', $firstname), _('Jméno'));
-$regForm->addInput(new \Ease\Html\InputTextTag('lastname', $lastname), _('Příjmení'));
+$regForm->addInput(new \Ease\Html\InputTextTag('firstname', $firstname),
+    _('Jméno'));
+$regForm->addInput(new \Ease\Html\InputTextTag('lastname', $lastname),
+    _('Příjmení'));
 
-$regForm->addInput(new \Ease\Html\InputTextTag('login'), _('přihlašovací jméno') . ' *');
-$regForm->addInput(new \Ease\Html\InputPasswordTag('password'), _('heslo') . ' *');
-$regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'), _('potvrzení hesla') . ' *');
-$regForm->addInput(new \Ease\Html\InputTextTag('email_address'), _('emailová adresa') . ' *');
+$regForm->addInput(new \Ease\Html\InputTextTag('login'),
+    _('přihlašovací jméno').' *');
+$regForm->addInput(new \Ease\Html\InputPasswordTag('password'), _('heslo').' *');
+$regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'),
+    _('potvrzení hesla').' *');
+$regForm->addInput(new \Ease\Html\InputTextTag('email_address'),
+    _('emailová adresa').' *');
 
-$regForm->addItem(new \Ease\Html\Div(new \Ease\Html\InputSubmitTag('Register', _('Registrovat'), ['title' => _('dokončit registraci'), 'class' => 'btn btn-success'])));
+$regForm->addItem(new \Ease\Html\Div(new \Ease\Html\InputSubmitTag('Register',
+    _('Registrovat'),
+    ['title' => _('dokončit registraci'), 'class' => 'btn btn-success'])));
 
 if (isset($_POST)) {
     $regForm->fillUp($_POST);

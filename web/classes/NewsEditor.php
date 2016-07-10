@@ -33,7 +33,14 @@ class NewsEditor extends \Ease\Html\Div
 
     public function articleListing()
     {
-        $articles = $this->newsEngine->getColumnsFromSQL('*', null, 'id', 'id');
+        $oUser = \Ease\Shared::user();
+        if ($oUser->getSettingValue('admin')) {
+            $articles = $this->newsEngine->getColumnsFromSQL('*', null, 'id',
+                'id');
+        } else {
+            $articles = $this->newsEngine->dblink->queryToArray('SELECT * FROM '.$this->newsEngine->getMyTable().' WHERE author = '.$oUser->getUserID(),
+                'id', 'id');
+        }
         $list     = new \Ease\Html\OlTag();
         foreach ($articles as $articleID => $article) {
 

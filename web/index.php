@@ -20,7 +20,7 @@ $indexrow = new \Ease\TWB\Row();
 $indexrow->addColumn(2);
 $newscolumn = $indexrow->addColumn(4, new \Ease\Html\H1Tag(_('News')));
 
-$newscolumn->addItem(new NewsShow());
+$newscolumn->addItem(new NewsShow(new News));
 
 
 $videocolumn = $indexrow->addColumn(6,
