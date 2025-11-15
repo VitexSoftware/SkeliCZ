@@ -40,10 +40,11 @@ class WebPage extends \Ease\TWB\WebPage {
      */
     public $column3 = NULL;
 
-    /**
-     * Basic Custom Twitter Bootstrap based webpage class
+    /****
+     * Initialize the Bootstrap-based webpage: register favicons, viewport meta, core CSS/JS,
+     * create the main container with a hero unit and three equal-width columns.
      *
-     * @param string $pageTitle
+     * @param string|null $pageTitle Optional page title to set for the page.
      */
     function __construct($pageTitle = null) {
         parent::__construct($pageTitle);
