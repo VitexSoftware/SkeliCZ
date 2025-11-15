@@ -49,8 +49,10 @@ class WebPage extends \Ease\TWB\WebPage {
         parent::__construct($pageTitle);
 
 //        $this->includeCss('css/main.css');
-        $this->head->addItem('<link rel="apple-touch-icon-precomposed" href="images/skelilogo.png">');
-        $this->head->addItem('<link rel="shortcut icon"  type="image/png" href="images/skelilogo.png">');
+        $this->head->addItem('<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">');
+        $this->head->addItem('<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">');
+        $this->head->addItem('<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">');
+        $this->head->addItem('<link rel="shortcut icon" href="favicon.ico">');
         $this->head->addItem('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
         $this->addCss('body {
                 padding-top: 60px;
